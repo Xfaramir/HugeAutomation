@@ -1,4 +1,4 @@
-import { AppPage } from './app.po';
+import { AppPage } from './pageobjects/app.po';
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to HugeAutomation!');
+    expect(page.getTitleText()).toEqual('Today at Huge.');
   });
 
   afterEach(async () => {

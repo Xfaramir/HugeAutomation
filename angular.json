@@ -112,13 +112,9 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "HugeAutomation:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "HugeAutomation:serve:production"
-            }
+            
           }
+         
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
