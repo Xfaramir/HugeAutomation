@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1549915154877' stop='1549915176246'>
+    <name>workspace-project App</name>
+    <title>workspace-project App</title>
+    <test-cases>
+        <test-case start='1549915154878' status='passed' stop='1549915170768'>
+            <name>Test Initial Loading Site</name>
+            <title>Test Initial Loading Site</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='53128a44-eb29-4f2f-b8a8-bc608b1bed55-attachment.png' type='image/png' size='81522'/>
+            </attachments>
+        </test-case>
+        <test-case start='1549915170768' status='passed' stop='1549915176245'>
+            <name>Test Second Loading Site</name>
+            <title>Test Second Loading Site</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='3fb9c3f3-a51a-452b-aaf2-77d16ddafc6c-attachment.png' type='image/png' size='84577'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

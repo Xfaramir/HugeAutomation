@@ -52,12 +52,10 @@ function handleResult(result) {
 
 describe('workspace-project App', () => {
   let page: AppPage;
+  browser.manage().deleteAllCookies();
+  page = new AppPage();
 
   beforeEach(() => {
-    browser.manage().deleteAllCookies();
-    browser.driver.manage().window().maximize();
-    
-    page = new AppPage();
     eyes.open(browser, appName, testName);
   });
 
@@ -70,11 +68,10 @@ describe('workspace-project App', () => {
 
   });
 
-
   it('Test Second Loading Site', () => {
-
+ 
     page.navigateToWeb("https://www.google.com/?hl=br");
-    eyes.checkWindow("Brasil Site");
+    eyes.checkWindow("Br Site");
     
 
   });
@@ -89,5 +86,6 @@ describe('workspace-project App', () => {
     eyes.close(false).then(function (result) {
       handleResult(result);
     });
+   
   });
 });
