@@ -12,7 +12,7 @@ exports.config = {
     'browserName': 'chrome'
   },
   directConnect: true,
-  baseUrl: 'https://www.hugeinc.com/',
+  baseUrl: 'https://www.google.com/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

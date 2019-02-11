@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1549911279467' stop='1549911289594'>
+    <name>workspace-project App</name>
+    <title>workspace-project App</title>
+    <test-cases>
+        <test-case start='1549911279467' status='failed' stop='1549911289593'>
+            <name>Test Loading Site</name>
+            <title>Test Loading Site</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='dae4ede8-d265-4852-90fc-f40dd203bb7f-attachment.png' type='image/png' size='47694'/>
+            </attachments>
+            <failure>
+                <message>close called with Eyes not open thrown</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1549911565446' stop='1549911587429'>
+    <name>workspace-project App</name>
+    <title>workspace-project App</title>
+    <test-cases>
+        <test-case start='1549911565446' status='failed' stop='1549911587429'>
+            <name>Test Loading Site</name>
+            <title>Test Loading Site</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='0707f18b-09a5-4f91-98af-96b8b4efa373-attachment.png' type='image/png' size='44926'/>
+            </attachments>
+            <failure>
+                <message>Failed: Failed to set viewport size!</message>
+                <stack-trace>Error: Failed: Failed to set viewport size!
+                    at stack (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2338:17)
+                    at buildExpectationResult (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2308:14)
+                    at Spec.expectationResultFactory (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:858:18)
+                    at Spec.addExpectationResult (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:487:34)
+                    at Env.fail (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1286:25)
+                    at Function.next.fail (/usr/local/lib/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4272:19)
+                    at /usr/local/lib/node_modules/protractor/node_modules/jasminewd2/index.js:64:48
+                    at ControlFlow.emit (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/events.js:62:21)
+                    at ControlFlow.shutdown_ (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2674:10)
+                    at shutdownTask_.MicroTask (/usr/local/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/promise.js:2599:53)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
