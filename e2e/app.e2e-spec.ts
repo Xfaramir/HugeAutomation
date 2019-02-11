@@ -7,9 +7,8 @@ var eyes = new Eyes();
 setup(eyes);
 
 //Defining ViewPorts
-var width = 1366;
-var height = 768;
-
+var width = 800;
+var height = 600;
 
 // Website and Test Name
 var appName: string = "Home";
@@ -61,23 +60,24 @@ describe('workspace-project App', () => {
     eyes.open(browser, appName, testName);
   });
 
-  if (!changeTest) {
-    try {
-      it('Test Initial Loading Site', () => {
-        page.navigateTo();
-        eyes.checkWindow("Loading Website");
-        page.navigateToWeb("https://www.google.com/?hl=en");
-        eyes.checkWindow("New Site");
-        eyes.close(false).then(function (result) {
-          handleResult(result);
-        });
+  it('Test Initial Loading Site', () => {
+    page.navigateTo();
+    eyes.checkWindow("Loading Website");
+    page.navigateToWeb("https://www.google.com/?hl=en");
+    eyes.checkWindow("US Site");
+    
 
-      });
-    } finally {
-      eyes.abortIfNotClosed().then();
-    }
+  });
 
-  }
+
+  it('Test Second Loading Site', () => {
+
+    page.navigateToWeb("https://www.google.com/?hl=br");
+    eyes.checkWindow("Brasil Site");
+    
+
+  });
+
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
@@ -85,6 +85,8 @@ describe('workspace-project App', () => {
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,
     }));
-
+    eyes.close(false).then(function (result) {
+      handleResult(result);
+    });
   });
 });
