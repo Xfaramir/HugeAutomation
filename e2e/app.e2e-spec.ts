@@ -7,8 +7,8 @@ var eyes = new Eyes();
 setup(eyes);
 
 //Defining ViewPorts
-var width = 800;
-var height = 600;
+var viewportSizeLandscape = {width: 1024, height: 768};
+var viewportSizePortrait  = {width: 500, height: 900};  
 
 // Website and Test Name
 var appName: string = "Home";
@@ -23,6 +23,7 @@ var changeTest = false;
 
 function setup(eyes) {
   eyes.setApiKey("FoLZm17nLHd1IjxD98SCyidR0CT0kSPvSaE101Riqh41gg110");
+  Eyes.setViewportSize(browser, viewportSizeLandscape);
   if (runAsBatch) {
     var batchName = "Hello World Batch";
     eyes.setBatch(batchName);
@@ -55,7 +56,7 @@ describe('workspace-project App', () => {
   beforeEach(() => {
     browser.manage().deleteAllCookies();
     browser.driver.manage().window().maximize();
-    browser.driver.manage().window().setSize(width, height);
+    
     page = new AppPage();
     eyes.open(browser, appName, testName);
   });
