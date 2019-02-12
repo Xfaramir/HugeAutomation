@@ -7,13 +7,15 @@ var eyes = new Eyes();
 setup(eyes);
 
 //Defining ViewPorts
-var width = 800;
+var width = 801;
 var height = 600;
 browser.driver.manage().window().setSize(width, height);
 
 // Website and Test Name
 var appName: string = "Home";
-var testName: string = "Huge Test";
+
+//If you want to change the BASELINE for EYES update number below
+var testName: string = "Huge Automation 0001";
 var resultStr;
 
 //set the value of runAsBatch to true so that the tests run as a single batch
@@ -53,23 +55,23 @@ describe('workspace-project App', () => {
   browser.manage().deleteAllCookies();
   page = new AppPage();
   beforeEach(() => {
+
+    //Eyes need to be re open for each it function in order to obtain difference between each run.
     eyes.open(browser, appName, testName);
   });
-  it('Test Initial Loading Site', () => {
-    page.navigateTo();
+  it('Test Initial Loading Sites', () => {
+    page.navigateToWeb("https://www.protractortest.org/");
     eyes.checkWindow("Loading Website");
-    eyes.checkWindow("Initial Site");
-  });
-  it('Test Second Loading Site', () => {
-    page.navigateToWeb("https://www.google.com/?hl=br");
-    eyes.checkWindow("Br Site");
+ 
+
   });
 
-  it('Test third Loading Site', () => {
-    page.navigateToWeb("https://www.google.com/?hl=en");
-    eyes.checkWindow("EN Site");
-  });
+  it('Test Second Loading Sites', () => {
+    page.navigateToWeb("https://www.protractortest.org/#/protractor-setup");
+    eyes.checkWindow("Loading Website");
+ 
 
+  });
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
@@ -77,7 +79,7 @@ describe('workspace-project App', () => {
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,
     }));
-    eyes.close(false).then(function (result) {
+    eyes.close().then(function (result) {
       handleResult(result);
     });
   });
