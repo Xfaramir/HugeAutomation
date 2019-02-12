@@ -12,10 +12,10 @@ var height = 600;
 browser.driver.manage().window().setSize(width, height);
 
 // Website and Test Name
-var appName: string = "Home";
+var appName: string = "Home 001";
 
 //If you want to change the BASELINE for EYES update number below
-var testName: string = "Huge Automation 0001";
+var testName: string = "Huge Automation 0003";
 var resultStr;
 
 //set the value of runAsBatch to true so that the tests run as a single batch
@@ -27,6 +27,8 @@ var changeTest = false;
 //Adding configuration to Eyes
 function setup(eyes) {
   eyes.setApiKey("FoLZm17nLHd1IjxD98SCyidR0CT0kSPvSaE101Riqh41gg110");
+  //Enabling FULL Page Screenshots. true,false
+  eyes.setForceFullPageScreenshot(false);
   if (runAsBatch) {
     var batchName = "Hello World Batch";
     eyes.setBatch(batchName);
@@ -67,7 +69,7 @@ describe('workspace-project App', () => {
   });
 
   it('Test Second Loading Sites', () => {
-    page.navigateToWeb("https://www.protractortest.org/#/protractor-setup");
+    page.navigateToWeb("https://www.protractortest.org/");
     eyes.checkWindow("Loading Website");
  
 
@@ -79,7 +81,7 @@ describe('workspace-project App', () => {
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,
     }));
-    eyes.close().then(function (result) {
+    eyes.close(false).then(function (result) {
       handleResult(result);
     });
   });
