@@ -9,7 +9,11 @@ exports.config = {
     './*.e2e-spec.ts'
   ],
   capabilities: {
-    'browserName': 'chrome'
+    browserName: 'chrome',
+
+    // chromeOptions: {
+    //   args: ["--headless", "--disable-gpu", "--window-size=800,600"]
+    // }
   },
   directConnect: true,
   baseUrl: 'https://www.google.com/?hl=en',
@@ -17,7 +21,7 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    print: function() {}
+    print: function () { }
   },
   onPrepare() {
     require('ts-node').register({
@@ -28,7 +32,7 @@ exports.config = {
     jasmine.getEnv().addReporter(new AllureReporter({
       resultsDir: './allure-results'
     }));
-    jasmine.getEnv().afterEach(function(done){
+    jasmine.getEnv().afterEach(function (done) {
       browser.takeScreenshot().then(function (png) {
         allure.createAttachment('Screenshot', function () {
           return new Buffer(png, 'base64')
@@ -40,5 +44,5 @@ exports.config = {
 
   }
 
-  
+
 };
