@@ -27,11 +27,15 @@ exports.config = {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
+
+    //Creating Allure report from jasmine results
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
     var AllureReporter = require('jasmine-allure-reporter');
     jasmine.getEnv().addReporter(new AllureReporter({
       resultsDir: './allure-results'
     }));
+
+    //Taking a screenshot at the end of each spec
     jasmine.getEnv().afterEach(function (done) {
       browser.takeScreenshot().then(function (png) {
         allure.createAttachment('Screenshot', function () {

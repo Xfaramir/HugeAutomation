@@ -1,6 +1,6 @@
 export class viewEyes {
 
-    eyesAPI: string = "FoLZm17nLHd1IjxD98SCyidR0CT0kSPvSaE101Riqh41gg110";
+    eyesAPI: string = "iFLTs7tDcGpQlhD8OhxB6FvM6gluKTezowxUqMKan10110";
     appName: string;
     testName: string;
     runAsBatch: boolean;
@@ -15,8 +15,7 @@ export class viewEyes {
         this.runAsBatch = false;
         this.changeTest = false;
         this.fullScreenShot = false;
-        this.resultStr = "";
-
+        this.resultStr = '';
     }
 
     setup(eyes) {

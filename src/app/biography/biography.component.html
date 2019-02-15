@@ -1,0 +1,123 @@
+
+
+{{employees | json}}
+
+
+
+
+
+<h1>{{ titulos | lowercase }}</h1>
+<h1>{{ titulos | uppercase }}</h1>
+<h2>{{ mensajes | titlecase }}</h2>
+<h2>{{ mensajes | slice:5:11 }}</h2>
+<h2>{{ persona | json }}</h2>
+<h2>{{numbero | number:'0.2-3'}}</h2>
+<h2>{{numbero | number:'1.1-4'}}</h2>
+<h2>{{numbero | number:'2.2-2'}}</h2>
+<h2>{{numbero | number:'3.3-3'}}</h2>
+<h2>{{0.40 | percent}}</h2>
+<h2>{{0.25 | currency: 'EUR' : 'code'}}</h2>
+<h2>{{fecha}}</h2>
+<h2>{{fecha | date:'short'}}</h2>
+<h2>{{fecha | date:'shortDate'}}</h2>
+<h2>{{fecha | date:'shortTime'}}</h2>
+
+
+
+
+
+
+
+<p>
+    desc
+    {{description}}
+    {{greeting}}
+</p>
+<input [id]="myid" type="button" value="Hello">
+<input id="{{myid}}" type="button" value="Hello">
+<input [disabled]="isDisabled" id="{{myid}}" type="button" value="Hello">
+<input bind-disabled="isDisabled" id="{{myid}}" type="button" value="Hello">
+
+
+
+<h2 class="text-success text-special">Trying something out</h2>
+<h2 [class]="successClass">Trying something out 1</h2>
+<h2 [class.text-danger]="hasError">Trying something out 1</h2>
+<h2 [ngClass]="messageClasses">Trying something out 1</h2>
+<h2 [style.color]="hasError ? 'yellow' : 'purple'">Style Binding</h2>
+<h2 [style.color]="highlighColor">Style binding 2</h2>
+<h3 [ngStyle]="tytleStyles">Style binding 3</h3>
+
+<button (click)="onClick($event)">greet</button>
+<button (click)="greeting='hello you'">greet</button>
+
+<input #myValue type="text">
+<button (click)="logMessage(myValue.value)"></button>
+
+<input [(ngModel)]="Name" type="text">
+{{Name}}
+
+
+<h2 *ngIf="true">Hello man</h2>
+<h2 *ngIf="displayElement">Hello element</h2>
+
+
+<h2 *ngIf="displayElement; else elseTemplate">
+    Way too good
+</h2>
+<ng-template #elseTemplate>
+    <h3>Way too BAD</h3>
+</ng-template>
+
+
+<ng-container *ngIf="displayElement; then thenTemplate; else elseTempla"></ng-container>
+<ng-template #thenTemplate>
+    <h1>Hello People</h1>
+</ng-template>
+<ng-template #elseTempla>
+    <h2>World is mad</h2>
+</ng-template>
+
+
+<span [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">
+        color red
+    </p>
+    <p *ngSwitchCase="'blue'">
+        Color blue
+    </p>
+    <p *ngSwitchDefault>
+        Default
+    </p>
+</span>
+
+
+<div *ngFor="let item of items ; index as i">
+    <h1>{{i}} {{item}}</h1>
+</div>
+
+<div *ngFor="let item of items ; first as f">
+    <h1>{{f}} {{item}}</h1>
+</div>
+
+<div *ngFor="let item of items ; last as l">
+    <h1>{{l}} {{item}}</h1>
+</div>
+
+
+<div *ngFor="let item of items ; odd as o">
+    <h1>{{o}} {{item}}</h1>
+</div>
+
+<div *ngFor="let item of items ; even as e">
+    <h1>{{e }} {{item}}</h1>
+</div>
+
+
+{{parentData}}
+
+{{titulo}}
+
+
+<button (click)="fireChildEvent()"></button>
+
