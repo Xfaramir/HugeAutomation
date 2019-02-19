@@ -9,7 +9,7 @@ var eyes = new Eyes();
 var eyeView = new viewEyes();
 eyeView.setup(eyes);
 
- 
+
 //Defining ViewPorts for the test
 let width = 801;
 let height = 600;
@@ -38,12 +38,6 @@ describe('workspace-project App', () => {
   });
 
   afterEach(async () => {
-    // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
-      level: logging.Level.SEVERE,
-    }));
-
     //Handling results from eyes in console.
     eyes.close(false).then(function (result) {
       eyeView.handleResult(result);

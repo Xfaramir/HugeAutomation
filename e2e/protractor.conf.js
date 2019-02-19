@@ -4,17 +4,23 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   allScriptsTimeout: 11000,
   specs: [
     './*.e2e-spec.ts'
   ],
-  capabilities: {
+  splitTestsBetweenCapabilities: true,
+  multiCapabilities: [{
     browserName: 'chrome',
+    count: 1,
+    chromeOptions: {
+      'args': ['no-sandbox', 'headless', 'disable-gpu']
+    },
+  }
+    , {
+    browserName: 'firefox'
+  }],
 
-    // chromeOptions: {
-    //   args: ["--headless", "--disable-gpu", "--window-size=800,600"]
-    // }
-  },
   directConnect: true,
   baseUrl: 'https://www.google.com/?hl=en',
   framework: 'jasmine',
