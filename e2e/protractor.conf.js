@@ -18,10 +18,12 @@ exports.config = {
     },
   }
     , {
-    browserName: 'firefox'
+    browserName: 'firefox',
+    'moz:firefoxOptions': {
+     args: [ "--headless" ]
+   }
   }],
-
-  directConnect: true,
+  // directConnect: true,
   baseUrl: 'https://www.google.com/?hl=en',
   framework: 'jasmine',
   jasmineNodeOpts: {
