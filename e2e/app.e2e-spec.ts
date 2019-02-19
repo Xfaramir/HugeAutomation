@@ -10,10 +10,10 @@ var eyeView = new viewEyes();
 eyeView.setup(eyes);
 
 
-//Defining ViewPorts for the test
-let width = 801;
-let height = 600;
-browser.driver.manage().window().setSize(width, height);
+// Defining ViewPorts for the no headless BROWSER 
+// let width = 800;
+// let height = 600;
+// browser.driver.manage().window().setSize(width, height);
 
 describe('workspace-project App', () => {
   let page: AppPage;

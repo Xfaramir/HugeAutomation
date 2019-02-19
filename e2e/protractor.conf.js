@@ -6,23 +6,36 @@ const { SpecReporter } = require('jasmine-spec-reporter');
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
   allScriptsTimeout: 11000,
-  specs: [
-    './*.e2e-spec.ts'
-  ],
+  suites: {
+    homepage: './*.e2e-spec.ts',
+    search: ['tests/e2e/contact_search/**/*Spec.js',
+      'tests/e2e/venue_search/**/*Spec.js']
+  },
   splitTestsBetweenCapabilities: true,
-  multiCapabilities: [{
-    browserName: 'chrome',
-    count: 1,
-    chromeOptions: {
-      'args': ['no-sandbox', 'headless', 'disable-gpu']
+  multiCapabilities: [
+    {
+      browserName: 'firefox',
+
+      'moz:firefoxOptions': {
+        args: ["--headless"]
+      }
     },
-  }
-    , {
-    browserName: 'firefox',
-    'moz:firefoxOptions': {
-     args: [ "--headless" ]
-   }
-  }],
+    {
+      browserName: 'chrome',
+      count: 1,
+      "goog:chromeOptions": {
+        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=1200,900']
+      },
+    },
+    {
+      browserName: 'chrome',
+      count: 1,
+      "goog:chromeOptions": {
+        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=300,600']
+      },
+    }
+  ],
+  //Uncomment line below if test will be run locally instead of using docker selenium hub.
   // directConnect: true,
   baseUrl: 'https://www.google.com/?hl=en',
   framework: 'jasmine',
