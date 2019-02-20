@@ -4,7 +4,7 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
-  // seleniumAddress: 'http://localhost:4444/wd/hub',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
   allScriptsTimeout: 11000,
   suites: {
     homepage: './*.e2e-spec.ts',
@@ -35,8 +35,8 @@ exports.config = {
       },
     }
   ],
-  //Uncomment line below if test will be run locally instead of using docker selenium hub.
-  directConnect: true,
+
+  directConnect: false,
   baseUrl: 'https://www.google.com/?hl=en',
   framework: 'jasmine',
   jasmineNodeOpts: {
