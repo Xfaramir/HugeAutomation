@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { EmployeeService } from '../employee.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-biography',
@@ -49,11 +50,11 @@ export class BiographyComponent implements OnInit {
 
   @Output() public childEvent = new EventEmitter();
 
-  constructor(private _employeeService: EmployeeService) { }
+  constructor(private _employeeService: EmployeeService, private http: HttpClient) { }
 
   ngOnInit() {
 
-    this.employees = this._employeeService.getEmployees();
+   this._employeeService.getEmployees().subscribe();
 
   }
 

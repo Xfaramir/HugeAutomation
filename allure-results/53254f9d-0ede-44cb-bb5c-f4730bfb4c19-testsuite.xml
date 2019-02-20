@@ -1,26 +1,26 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1550267295197' stop='1550267304902'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1550677530645' stop='1550677539454'>
     <name>workspace-project App</name>
     <title>workspace-project App</title>
     <test-cases>
-        <test-case start='1550267295197' status='passed' stop='1550267301786'>
+        <test-case start='1550677530645' status='passed' stop='1550677535464'>
             <name>Test Initial Loading Sites</name>
             <title>Test Initial Loading Sites</title>
             <labels/>
             <parameters/>
             <steps/>
             <attachments>
-                <attachment title='Screenshot' source='5c09180a-6018-41be-84b1-6b5197526a33-attachment.png' type='image/png' size='63355'/>
+                <attachment title='Screenshot' source='5b6c4238-b7bf-4020-bad3-a9d3468fe0b8-attachment.png' type='image/png' size='145452'/>
             </attachments>
         </test-case>
-        <test-case start='1550267301786' status='passed' stop='1550267304901'>
+        <test-case start='1550677535464' status='passed' stop='1550677539454'>
             <name>Test Second Loading Sites</name>
             <title>Test Second Loading Sites</title>
             <labels/>
             <parameters/>
             <steps/>
             <attachments>
-                <attachment title='Screenshot' source='f8bcca9c-e9a4-4530-afc6-c3fcc241c412-attachment.png' type='image/png' size='63355'/>
+                <attachment title='Screenshot' source='e989001a-d11f-4fdd-b9ab-cc11e823b0c4-attachment.png' type='image/png' size='145452'/>
             </attachments>
         </test-case>
     </test-cases>

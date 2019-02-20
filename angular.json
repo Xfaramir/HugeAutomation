@@ -103,7 +103,7 @@
         }
       }
     },
-    "HugeAutomation-e2e": {
+    "e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
