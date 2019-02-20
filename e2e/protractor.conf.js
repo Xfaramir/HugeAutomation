@@ -36,7 +36,7 @@ exports.config = {
     }
   ],
   //Uncomment line below if test will be run locally instead of using docker selenium hub.
-  // directConnect: true,
+  directConnect: true,
   baseUrl: 'https://www.google.com/?hl=en',
   framework: 'jasmine',
   jasmineNodeOpts: {
