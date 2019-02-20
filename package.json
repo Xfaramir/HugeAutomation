@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "webdriver": "webdriver-manager update && webdriver-manager start ",
+    "webdriver": "webdriver-manager update && nohup webdriver-manager start ",
     "dev": "npm run webdriver && npm run e2e"
   },
   "private": true,

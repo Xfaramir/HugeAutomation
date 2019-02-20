@@ -1,0 +1,15 @@
+[12:12:43] I/start - java -Dwebdriver.chrome.driver=/Users/jbarrera/Protractor/HugeAutomation/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.46 -Dwebdriver.gecko.driver=/Users/jbarrera/Protractor/HugeAutomation/node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.24.0 -jar /Users/jbarrera/Protractor/HugeAutomation/node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar -port 4444
+[12:12:43] I/start - seleniumProcess.pid: 24622
+12:12:43.557 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+12:12:43.634 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-02-20 12:12:43.679:INFO::main: Logging initialized @335ms to org.seleniumhq.jetty9.util.log.StdErrLog
+12:12:43.890 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+12:12:43.992 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+[12:13:05] I/start - Attempting to shut down selenium nicely
+[12:13:06] I/start - Attempting to shut down selenium nicely
+[12:13:07] I/start - Attempting to shut down selenium nicely
+[12:13:07] I/start - Attempting to shut down selenium nicely
+[12:13:08] I/start - Attempting to shut down selenium nicely
+[12:13:09] I/start - Attempting to shut down selenium nicely
+[12:13:12] I/start - Staying alive until the Selenium Standalone process exits
+[12:13:12] I/start - Selenium Standalone has exited with code 130
