@@ -36,7 +36,7 @@ exports.config = {
     }
   ],
 
-  directConnect: false,
+  directConnect: true,
   baseUrl: 'https://www.google.com/?hl=en',
   framework: 'jasmine',
   jasmineNodeOpts: {
