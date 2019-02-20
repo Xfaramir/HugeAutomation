@@ -26,6 +26,7 @@ describe('workspace-project App', () => {
   it('Test Initial Loading Sites', () => {
     page.navigateToWeb("https://www.protractortest.org/");
     eyes.checkWindow("Loading Website");
+    console.log(process.env.APPLITOOLS_BATCH_NAME, process.env.APPLITOOLS_BATCH_ID);
 
 
   });
