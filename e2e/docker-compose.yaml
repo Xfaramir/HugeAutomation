@@ -27,3 +27,39 @@ services:
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
+  iphone5s:
+    image: selenium/node-chrome:3.141.59-gold
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+  googlePixelMobile:
+    image: selenium/node-chrome:3.141.59-gold
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+  galaxyTabS2:
+    image: selenium/node-chrome:3.141.59-gold
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+  pixelTablet:
+    image: selenium/node-chrome:3.141.59-gold
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
