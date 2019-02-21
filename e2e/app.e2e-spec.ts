@@ -2,11 +2,11 @@ import { AppPage } from './pageobjects/app.po';
 import { browser, logging } from 'protractor';
 import { viewEyes } from "./eyeConfig";
 // Initialize the eyes SDK.
-var Eyes = require("eyes.selenium").Eyes;
-var eyes = new Eyes();
+const Eyes = require('eyes.selenium').Eyes;
+const eyes = new Eyes();
 
-//Setting up Eyes configuration and private API key
-var eyeView = new viewEyes();
+// Setting up Eyes configuration and private API key
+const eyeView = new viewEyes();
 eyeView.setup(eyes);
 
 
@@ -20,22 +20,24 @@ describe('GSuite English', () => {
   browser.manage().deleteAllCookies();
   page = new AppPage();
   beforeEach(() => {
-    //Eyes need to be re open for each 'it' function in order to obtain difference between each run.
+    // Eyes need to be re open for each 'it' function in order to obtain difference between each run.
     eyes.open(browser, eyeView.appName, eyeView.testName);
   });
 
-  it('Gsuite English', () => {
-    page.navigateToWeb('https://gsuite.google.com/features/');
-    eyes.checkWindow('Gsuite English');
-  });
-  it('English – Australia', () => {
-    page.navigateToWeb('https://gsuite.google.com/intl/en_au/features/');
-    eyes.checkWindow('Gsuite Australia');
-  });
+  // In case excel needs to be converted to json or to update urls from excel
+  // page.convertUrlsExcel();
 
+  const json = require('../e2e/pageobjects/testUrls.json');
+  for (const site of json) {
+    it('Gsuite English', () => {
+      console.log(site.URL);
+      page.navigateToWeb(site.URL);
+      eyes.checkWindow(site.Locale);
+    });
+  }
   afterEach(async () => {
-    //Handling results from eyes in console.
-    eyes.close(false).then(function (result) {
+    // Handling results from eyes in console.
+    eyes.close(false).then((result) => {
       eyeView.handleResult(result);
     });
   });

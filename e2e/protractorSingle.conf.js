@@ -15,64 +15,22 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
-  directConnect: false,
+  directConnect: true,
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  allScriptsTimeout: 600000,
+  allScriptsTimeout: 20000,
   suites: {
     homepage: './*.e2e-spec.ts',
     search: ['tests/e2e/contact_search/**/*Spec.js',
       'tests/e2e/venue_search/**/*Spec.js']
   },
   splitTestsBetweenCapabilities: true,
-  multiCapabilities: [
-    {
-      //Chrome
-      browserName: 'chrome',
-      count: 1,
-      "goog:chromeOptions": {
-        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=1366,768']
-      },
-    },
-    {
-      //iPhone 5 (s)
-      browserName: 'chrome',
-      count: 1,
-      "goog:chromeOptions": {
-        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=320,460']
-      },
-    },
-    {
-      //Google Pixel Mobile
-      browserName: 'chrome',
-      count: 1,
-      "goog:chromeOptions": {
-        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=412,604']
-      },
-    },
-    {
-      //Galaxy Tab S2
-      browserName: 'chrome',
-      count: 1,
-      "goog:chromeOptions": {
-        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=768,904']
-      },
-    },
-    {
-      //Pixel Tablet
-      browserName: 'chrome',
-      count: 1,
-      "goog:chromeOptions": {
-        'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=900,1104']
-      },
-    },
-    {
-      //Firefox
-      browserName: 'firefox',
-      'moz:firefoxOptions': {
-        args: ["--headless", "--window-size=1366,768"]
-      }
+  capabilities: {
+    'browserName': 'chrome',
+    'chromeOptions': {
+      'args': ['show-fps-counter=true']
     }
-  ],
+  },
+  
   baseUrl: '',
   framework: 'jasmine',
   jasmineNodeOpts: {

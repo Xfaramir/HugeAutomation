@@ -44,5 +44,4 @@ export class viewEyes {
         this.resultStr += '\n' + 'results at ';
         console.log(this.resultStr);
     }
-
 }
