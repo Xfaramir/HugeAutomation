@@ -15,47 +15,46 @@
 const { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
-  directConnect: true,
+  directConnect: false,
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  allScriptsTimeout: 20000,
+  allScriptsTimeout: 100000,
   suites: {
     homepage: './*.e2e-spec.ts',
     search: ['tests/e2e/contact_search/**/*Spec.js',
       'tests/e2e/venue_search/**/*Spec.js']
   },
   splitTestsBetweenCapabilities: true,
-  capabilities: {
+  multiCapabilities: {
     'browserName': 'chrome',
-    'chromeOptions': {
-      'args': ['show-fps-counter=true']
+    "goog:chromeOptions": {
+      'args': ['no-sandbox', '--headless', 'disable-gpu', '--window-size=1366,768']
     }
   },
-  
+
   baseUrl: '',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 300000,
-    print: function () { }
   },
   onPrepare() {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
-    //Creating Allure report from jasmine results
-    jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
-    var AllureReporter = require('jasmine-allure-reporter');
-    jasmine.getEnv().addReporter(new AllureReporter({
-      resultsDir: './allure-results'
-    }));
+    // //Creating Allure report from jasmine results
+    // jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
+    // var AllureReporter = require('jasmine-allure-reporter');
+    // jasmine.getEnv().addReporter(new AllureReporter({
+    //   resultsDir: './allure-results'
+    // }));
     //Taking a screenshot at the end of each spec for jenkins allure report
-    jasmine.getEnv().afterEach(function (done) {
-      browser.takeScreenshot().then(function (png) {
-        allure.createAttachment('Screenshot', function () {
-          return new Buffer(png, 'base64')
-        }, 'image/png')();
-        done();
-      })
-    });
+    // jasmine.getEnv().afterEach(function (done) {
+    //   browser.takeScreenshot().then(function (png) {
+    //     allure.createAttachment('Screenshot', function () {
+    //       return new Buffer(png, 'base64')
+    //     }, 'image/png')();
+    //     done();
+    //   })
+    // });
   }
 };

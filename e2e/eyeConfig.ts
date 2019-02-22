@@ -1,5 +1,5 @@
 export class viewEyes {
-    eyesAPI = 'LtBfXNSccE0IRGNsYp73AMlIz4Y7OD976MqkRIQfa088110';
+    eyesAPI = 'GME47jhSdQqDXOacgotbAycbK1072bkgAUGdALm7EW7X4110';
     appName: string;
     testName: string;
     runAsBatch: boolean;
@@ -7,14 +7,14 @@ export class viewEyes {
     fullScreenShot: boolean;
     resultStr: string;
 
-    constructor() {
+    constructor(testName) {
         // In case you need to create a new baseline just change appname and testname below.
-        this.appName = 'Home GSuite 04';
-        this.testName = 'Gsuite visual Automation 004';
+        this.appName = 'Framework GSuite 02/23/2019';
+        this.testName = testName;
         // runAsBatch to be set to true in case of jenkins CI.
         this.runAsBatch = false;
         this.changeTest = false;
-        this.fullScreenShot = true;
+        this.fullScreenShot = false;
         this.resultStr = '';
     }
 

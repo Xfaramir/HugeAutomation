@@ -1,14 +1,199 @@
 [
     {
-        "Removed 'Y / N'": "No",
-        "Page": "",
-        "Locale": "中文（繁體中文）",
-        "URL": "https://gsuite.google.com/intl/zh-TW/features/"
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Bahasa Indonesia",
+        "URL": "https://gsuite.google.com/intl/id/features/",
+        "GORO": "https://gsuite.google.com/intl/id/features/"
     },
     {
-        "Removed 'Y / N'": "No",
-        "Page": "",
-        "Locale": "日本語",
-        "URL": "https://gsuite.google.com/intl/ja/features/"
-    }
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Čeština",
+        "URL": "https://gsuite.google.com/intl/cs/features/",
+        "GORO": "https://gsuite.google.com/intl/cs/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Dansk",
+        "URL": "https://gsuite.google.com/intl/da/features/",
+        "GORO": "https://gsuite.google.com/intl/da/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Deutsch",
+        "URL": "https://gsuite.google.com/intl/de/features/",
+        "GORO": "https://gsuite.google.com/intl/de/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English",
+        "URL": "https://gsuite.google.com/features/",
+        "GORO": "https://gsuite.google.com/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – Australia",
+        "URL": "https://gsuite.google.com/intl/en_au/features/",
+        "GORO": "https://gsuite.google.com/intl/en_au/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – India",
+        "URL": "https://gsuite.google.com/intl/en_in/features/",
+        "GORO": "https://gsuite.google.com/intl/en_in/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – Indonesia",
+        "URL": "https://gsuite.google.com/intl/en_id/features/",
+        "GORO": "https://gsuite.google.com/intl/en_id/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – Ireland",
+        "URL": "https://gsuite.google.com/intl/en_ie/features/",
+        "GORO": "https://gsuite.google.com/intl/en_ie/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – Malaysia",
+        "URL": "https://gsuite.google.com/intl/en_my/features/",
+        "GORO": "https://gsuite.google.com/intl/en_my/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – New Zealand",
+        "URL": "https://gsuite.google.com/intl/en_nz/features/",
+        "GORO": "https://gsuite.google.com/intl/en_nz/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – Philippines",
+        "URL": "https://gsuite.google.com/intl/en_ph/features/",
+        "GORO": "https://gsuite.google.com/intl/en_ph/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – Singapore",
+        "URL": "https://gsuite.google.com/intl/en_sg/features/",
+        "GORO": "https://gsuite.google.com/intl/en_sg/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "English – United Kingdom",
+        "URL": "https://gsuite.google.com/intl/en_uk/features/",
+        "GORO": "https://gsuite.google.com/intl/en_uk/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Español",
+        "URL": "https://gsuite.google.com/intl/es/features/",
+        "GORO": "https://gsuite.google.com/intl/es/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Español (Latinoamérica)",
+        "URL": "https://gsuite.google.com/intl/es-419/features/",
+        "GORO": "https://gsuite.google.com/intl/es-419/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Español (Latinoamérica) – México",
+        "URL": "https://gsuite.google.com/intl/es-419_mx/features/",
+        "GORO": "https://gsuite.google.com/intl/es-419_mx/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Français",
+        "URL": "https://gsuite.google.com/intl/fr/features/",
+        "GORO": "https://gsuite.google.com/intl/fr/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Français – Canada",
+        "URL": "https://gsuite.google.com/intl/fr_ca/features/",
+        "GORO": "https://gsuite.google.com/intl/fr_ca/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Italiano",
+        "URL": "https://gsuite.google.com/intl/it/features/",
+        "GORO": "https://gsuite.google.com/intl/it/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Magyar",
+        "URL": "https://gsuite.google.com/intl/hu/features/",
+        "GORO": "https://gsuite.google.com/intl/hu/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Nederlands",
+        "URL": "https://gsuite.google.com/intl/nl/features/",
+        "GORO": "https://gsuite.google.com/intl/nl/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Norsk",
+        "URL": "https://gsuite.google.com/intl/no/features/",
+        "GORO": "https://gsuite.google.com/intl/no/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Polski",
+        "URL": "https://gsuite.google.com/intl/pl/features/",
+        "GORO": "https://gsuite.google.com/intl/pl/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Português (Brasil)",
+        "URL": "https://gsuite.google.com/intl/pt-BR/features/",
+        "GORO": "https://gsuite.google.com/intl/pt-BR/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Português (Portugal)",
+        "URL": "https://gsuite.google.com/intl/pt-PT/features/",
+        "GORO": "https://gsuite.google.com/intl/pt-PT/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Suomi",
+        "URL": "https://gsuite.google.com/intl/fi/features/",
+        "GORO": "https://gsuite.google.com/intl/fi/features/"
+    },
+    {
+        "Run": "Yes",
+        "Page": "Features / Overview",
+        "Locale": "Svenska",
+        "URL": "https://gsuite.google.com/intl/sv/features/",
+        "GORO": "https://gsuite.google.com/intl/sv/features/"
+    },
+   
 ]

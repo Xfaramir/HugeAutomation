@@ -1,15 +1,13 @@
 {
   "name": "huge-automation",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "webdriver": "webdriver-manager update && nohup webdriver-manager start ",
-    "dev": "npm run webdriver && npm run e2e"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +23,7 @@
     "jasmine-allure-reporter": "^1.0.2",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "xls-to-json": "^0.5.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

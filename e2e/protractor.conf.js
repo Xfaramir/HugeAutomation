@@ -23,10 +23,9 @@ exports.config = {
     search: ['tests/e2e/contact_search/**/*Spec.js',
       'tests/e2e/venue_search/**/*Spec.js']
   },
-  splitTestsBetweenCapabilities: true,
   multiCapabilities: [
     {
-      //Chrome
+      name: 'chrome',
       browserName: 'chrome',
       count: 1,
       "goog:chromeOptions": {
@@ -34,7 +33,8 @@ exports.config = {
       },
     },
     {
-      //iPhone 5 (s)
+
+      name: 'iPhone 5 (s)',
       browserName: 'chrome',
       count: 1,
       "goog:chromeOptions": {
@@ -42,7 +42,8 @@ exports.config = {
       },
     },
     {
-      //Google Pixel Mobile
+
+      name: 'Google Pixel Mobile',
       browserName: 'chrome',
       count: 1,
       "goog:chromeOptions": {
@@ -50,7 +51,7 @@ exports.config = {
       },
     },
     {
-      //Galaxy Tab S2
+      name: 'Galaxy Tab S2',
       browserName: 'chrome',
       count: 1,
       "goog:chromeOptions": {
@@ -58,7 +59,7 @@ exports.config = {
       },
     },
     {
-      //Pixel Tablet
+      name: 'Pixel Tablet',
       browserName: 'chrome',
       count: 1,
       "goog:chromeOptions": {
@@ -66,10 +67,10 @@ exports.config = {
       },
     },
     {
-      //Firefox
+      name: 'Firefox',
       browserName: 'firefox',
       'moz:firefoxOptions': {
-        args: ["--headless", "--window-size=1366,768"]
+        args: ["--headless", "--width=1366", "--height=768"]
       }
     }
   ],

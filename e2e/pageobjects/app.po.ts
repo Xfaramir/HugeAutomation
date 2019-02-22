@@ -34,7 +34,7 @@ export class AppPage {
     xls_json({
       input: __dirname + '/ListUrls.xls',
       output: __dirname + '/testUrls.json',
-      sheet: 'Sheet1'
+      sheet: 'Sheet2'
     }, function (err, result) {
 
       if (err) {
